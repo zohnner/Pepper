@@ -1,0 +1,32 @@
+# beats.yaml — ep004 "The Mayor's Math"
+# Single source of truth: voiceover.txt, captions.srt, and rough-cut trims
+# all derive from this file. Hook is beat 1 (shot "00"). The silent end-card
+# crank shot (shot "05") needs no entry — the assembler holds it at the tail.
+
+voice: avocado_v2:Lily
+
+beats:
+  - shot: "00"
+    caption: |
+      I worked all night. I now owe more
+      than I did yesterday.
+
+  - shot: "01"
+    caption: |
+      Marlow needed the floodgates cranked
+      before the surge. Two cranks. My biggest job yet.
+
+  - shot: "02"
+    caption: |
+      Nib bailed water with his helmet.
+      Said it was the best day of his life. He's seven.
+
+  - shot: "03"
+    caption: |
+      Two cranks earned. Then Marlow read the fees.
+      Lantern tax: three cranks.
+
+  - shot: "04"
+    caption: |
+      I did the math out loud. He smiled.
+      Cranks, my dear. Not math.
