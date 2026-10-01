@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,DejaVu Serif,64,&H00FFFFFF,&H000019FF,&H80000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,60,60,260,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.10,Cap,,0,0,0,,There's a turtle under the Mile\Nwho remembers when the tunnels were rivers.
+Dialogue: 0,0:00:04.78,0:00:08.96,Cap,,0,0,0,,Nib says Old Moss remembers everything.\NEven the way up.
+Dialogue: 0,0:00:09.30,0:00:13.08,Cap,,0,0,0,,I asked him how to get home faster.\NHe laughed for a full minute.
+Dialogue: 0,0:00:13.34,0:00:22.54,Cap,,0,0,0,,Then he said: the lift goes up, little stray. But debts\Nonly fall if you stop counting his way. Count what HE\Ncounts, not what you see.
+Dialogue: 0,0:00:23.20,0:00:27.99,Cap,,0,0,0,,On the way back, I heard her. Just once.\NMy name, from above.
