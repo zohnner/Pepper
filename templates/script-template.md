@@ -33,8 +33,9 @@ One crank. Light from above a fraction closer. Cut.
 Target 60-90 words of voiceover total.
 
 ### Generation rules (learned from production)
+- **Style is LOCKED** — see `bible/style-lock.md`. Use the style block verbatim in every still prompt,
+  and chain BOTH the model sheet and `episodes/ep001/style-test/style-c-stylized.webp` on every generation.
 - **Ear side:** the generator mirrors the torn ear unless the IMAGE side is spelled out.
   Always write "torn ear with V-shaped notch on the RIGHT SIDE OF THE IMAGE (her left ear)"
   in the Pepper block — never rely on "her left ear" alone.
-- Chain the model sheet (`bible/reference/media-generation-pepper-model-sheet-0-*.webp`) on every still.
 - Vertical 9:16 only. Verify 1152×2048 (stills) before animating anything.
