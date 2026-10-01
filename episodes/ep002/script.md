@@ -16,7 +16,7 @@ Voiceover: "Nib came anyway. Said the tunnels take a toll. I told him I don't pa
 **Shot 3 — A round mouse-family door in a tunnel wall, Pepper sliding the envelope underneath, warm light from inside**
 Voiceover: "The envelope was an eviction notice. For a family of mice. I was the bad guy's courier."
 
-**Shot 4 — Close-up of Pepper's face, guilt, water droplets on her whiskers, lantern light**
+**Shot 4 — Door-hold: the mouse-family door lingers as Pepper's guilt beat plays** (the planned Pepper guilt close-up was blocked at image generation on 2026-10-01; per Zohn's option-2 call, shot 04 reuses the shot-03 door visual. 04.mp4 = copy of 03.mp4.)
 Voiceover: "The mother thanked me. Said at least the mayor sent someone kind. I earned my first crank tonight. It felt like stealing."
 
 ### Complication
