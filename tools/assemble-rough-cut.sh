@@ -10,6 +10,10 @@
 # hold (default 3.5s). Burned-in captions keep their SRT timings, which now
 # match the visual cuts by construction.
 #
+# Optional pack/debt.json {"start":47,"end":46,"tick_at":"lift"} burns in the
+# debt-counter HUD (amber ◈ START top-left, ticks at the tick shot; flashes
+# red for 1s if the debt went UP). Absent = no counter.
+#
 # The rough cut is a DRAFT. Zohn's CapCut pass adds the music bed, cover,
 # and final polish.
 set -euo pipefail
@@ -65,10 +69,10 @@ open(ass_path, "w").write(ass)
 print(f"wrote {ass_path} ({len(events)} events)", file=sys.stderr)
 PYEOF
 
-# Derive one duration per clip from the caption beats.
-DURS="$(python3 - "$PACK/captions.srt" "$TAIL_DUR" "${#CLIPS[@]}" <<'PYEOF'
-import re, sys
-srt_path, tail, nclips = sys.argv[1], float(sys.argv[2]), int(sys.argv[3])
+# Derive one duration per clip from the caption beats, plus the debt-tick time.
+eval "$(python3 - "$PACK/captions.srt" "$TAIL_DUR" "${#CLIPS[@]}" "$PACK/debt.json" <<'PYEOF'
+import re, sys, json, os
+srt_path, tail, nclips, debt_path = sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
 text = open(srt_path).read()
 blocks = re.findall(r"(\d+):(\d+):(\d+),(\d+)\s*-->\s*(\d+):(\d+):(\d+),(\d+)", text)
 def sec(h, m, s, ms): return int(h)*3600 + int(m)*60 + int(s) + int(ms)/1000.0
@@ -89,8 +93,21 @@ if nclips < len(caps):
     durs[-1] = caps[-1][1] - start_last
     print(f"warning: {len(caps)} captions but only {nclips} clips; last clip stretched to {durs[-1]:.2f}s",
           file=sys.stderr)
-print(" ".join(f"{d:.3f}" for d in durs))
+print("DURS=\"" + " ".join(f"{d:.3f}" for d in durs) + "\"")
 print(f"total {t:.2f}s -> {' '.join(f'{d:.1f}' for d in durs)}", file=sys.stderr)
+# Debt tick time: cumulative duration before the tick shot starts.
+tick_t, dstart, dend = "", "", ""
+if os.path.exists(debt_path):
+    debt = json.load(open(debt_path))
+    dstart, dend = str(debt["start"]), str(debt["end"])
+    tick_at = str(debt.get("tick_at", "lift"))
+    idx = nclips - 1 if tick_at == "lift" else int(tick_at)
+    idx = max(0, min(idx, nclips - 1))
+    tick_t = f"{sum(durs[:idx]):.3f}"
+    print(f"debt {dstart}->{dend} tick at clip {idx} (t={tick_t}s)", file=sys.stderr)
+print(f"TICK_T=\"{tick_t}\"")
+print(f"DEBT_START=\"{dstart}\"")
+print(f"DEBT_END=\"{dend}\"")
 PYEOF
 )"
 read -ra DUR_ARR <<< "$DURS"
@@ -118,10 +135,30 @@ ESCAPED="$(echo "$ASS" | sed "s/'/\\\\'/g")"
 SUB=",subtitles=filename='${ESCAPED}'"
 
 if [ -n "$SUB" ]; then
-  VCHAIN=";[vout]${SUB#,},format=yuv420p[vfinal]"
+  VCHAIN=";[vout]${SUB#,}[vsub]"
 else
-  VCHAIN=";[vout]format=yuv420p[vfinal]"
+  VCHAIN=";[vout]null[vsub]"
 fi
+
+# Debt counter HUD (only when pack/debt.json exists).
+# Amber ◈ START top-left from t=0; ticks to ◈ END at the tick shot.
+# If debt went UP, the new value flashes red for 1s. (The cruelty is the point.)
+# SFX click not yet sourced — visual tick only.
+if [ -n "${TICK_T:-}" ]; then
+  DFONT="$(dirname "$0")/fonts/JetBrainsMono-Bold.ttf"
+  DTXT="fontfile='${DFONT}':fontsize=44:fontcolor=#E8A33D:box=1:boxcolor=#0B0E14:boxborderw=18:x=60:y=120"
+  VCHAIN+=";[vsub]drawtext=${DTXT}:text='◈ ${DEBT_START}':enable='lt(t,${TICK_T})'[vdb0]"
+  if [ "$DEBT_END" -gt "$DEBT_START" ]; then
+    TICK_END="$(awk "BEGIN{print ${TICK_T}+1}")"
+    VCHAIN+=";[vdb0]drawtext=${DTXT}:fontcolor=#E5484D:text='◈ ${DEBT_END}':enable='gte(t,${TICK_T})*lt(t,${TICK_END})'[vdb1]"
+    VCHAIN+=";[vdb1]drawtext=${DTXT}:text='◈ ${DEBT_END}':enable='gte(t,${TICK_END})'[vdebt]"
+  else
+    VCHAIN+=";[vdb0]drawtext=${DTXT}:text='◈ ${DEBT_END}':enable='gte(t,${TICK_T})'[vdebt]"
+  fi
+else
+  VCHAIN+=";[vsub]null[vdebt]"
+fi
+VCHAIN+=";[vdebt]format=yuv420p[vfinal]"
 
 ffmpeg -y "${INPUTS[@]}" \
   -filter_complex "${FILTER}${VCHAIN}" \
