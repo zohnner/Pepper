@@ -9,11 +9,13 @@ Pepper wading through a flooded brick tunnel, water up to her belly, a sealed cr
 ## Shot 2
 A scruffy young brown rat with a red bottle-cap helmet riding a floating wooden crate beside Pepper in the flood tunnel, holding a tiny lantern high, gesturing. Gentle bobbing, lantern sways, slow lateral drift.
 
+REGENERATED v2 (2026-10-01): the first animation drifted an extra upper arm onto Nib. v2 still locks exact anatomy — two arms (one raised with lantern, one gesturing), two legs on the crate — and the animation holds it.
+
 ## Shot 3
 A round wooden door set in a tunnel wall with a tiny brass knocker, warm light glowing from the gap beneath it, Pepper sliding a sealed envelope under the door with her paw, small mouse silhouettes visible in the lit crack. Slow push-in on the door, light flickers.
 
 ## Shot 4
-Close-up of Pepper's face, guilt in her oversized green eyes, water droplets on her whiskers, warm lantern light from the side. Very slow push-in, her eyes drop.
+REPLANNED (2026-10-01): door-hold reusing the shot-03 visual — same door + mouse silhouettes + warm light, reframed as the lingering guilt image while beat 5 plays. No Pepper close-up needed; the door carries the beat.
 
 ## The lift (final)
-A large iron crank handle turning exactly one notch, dust falling, red-gold lantern light, a shaft of daylight above widening slightly. Crank turns one notch, light shaft brightens a fraction. Cut to black.
+REGENERATED v2 (2026-10-01): the first ending was a crank close-up with no lift payoff and read as a random machine. v2 shows the lift properly — Pepper's paw turning the crank exactly one notch, a heavy chain running taut UP from the crank to the lift platform overhead, the platform visibly risen, the shaft of daylight above widened a fraction, dust falling through the light. She is earning the crank.
