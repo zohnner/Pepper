@@ -20,7 +20,12 @@ set -euo pipefail
 
 ARG="${1:?usage: assemble-rough-cut.sh <epNNN> | <pack-dir>}"
 TAIL_DUR="${TAIL_DUR:-3.5}"   # end-card hold for clips past the last caption
-if [[ "$ARG" == *"/"* ]]; then PACK="$ARG"; else PACK="$(dirname "$0")/../episodes/$ARG/pack"; fi
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [[ "$ARG" == *"/"* ]]; then PACK="$ARG"; else PACK="$SCRIPT_DIR/../episodes/$ARG/pack"; fi
+# Resolve to an absolute path BEFORE the cd below: every later reference
+# (captions.srt, debt.json, the font) is built from $PACK or $0, and a
+# relative $PACK would silently break once we cd into it.
+PACK="$(cd "$PACK" && pwd)"
 OUT="$PACK/rough-cut.mp4"
 
 cd "$PACK"
@@ -145,7 +150,7 @@ fi
 # If debt went UP, the new value flashes red for 1s. (The cruelty is the point.)
 # SFX click not yet sourced — visual tick only.
 if [ -n "${TICK_T:-}" ]; then
-  DFONT="$(dirname "$0")/fonts/JetBrainsMono-Bold.ttf"
+  DFONT="$SCRIPT_DIR/fonts/JetBrainsMono-Bold.ttf"
   DTXT="fontfile='${DFONT}':fontsize=44:fontcolor=#E8A33D:box=1:boxcolor=#0B0E14:boxborderw=18:x=60:y=120"
   VCHAIN+=";[vsub]drawtext=${DTXT}:text='◈ ${DEBT_START}':enable='lt(t,${TICK_T})'[vdb0]"
   if [ "$DEBT_END" -gt "$DEBT_START" ]; then
