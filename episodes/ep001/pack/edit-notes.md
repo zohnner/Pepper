@@ -11,6 +11,10 @@
 4. Cover frame: use the cover text below, burned in or as a text layer: "47 CRANKS. 12 CHAINS."
 5. Export: 1080×1920, 30fps, high bitrate. No watermarks.
 
-## Notes
-- Shot 4's still was center-cropped from a square render (generator refused a fresh vertical). Eyeball it in the timeline — if the composition feels tight, flag for regeneration.
+## Notes — STYLE-C RETRY (2026-10-01)
+- This pack is the full style-C retry: all 5 stills regenerated in the locked "stylized 3D storybook
+  noir" look (bible/style-lock.md), re-animated, pack rebuilt. Voiceover/captions/cover unchanged.
+- Shot 4 got a FRESH vertical generation this time (no crop) — platform, chains, grate daylight,
+  Pepper small at the edge. No fallback needed.
+- All 5 stills passed the drift firewall: Pepper's four marks verified, style matched to the lock.
 - The hook lands in the first 3 seconds: keep shot 1's opening frame punchy, no fade-in.
