@@ -14,6 +14,8 @@
 
 If a generated image is missing any of these, it gets regenerated. These three marks are what make her recognizable at a glance.
 
+**Chaining authority:** `bible/reference/` — use the clean model sheet (`pepper-model-sheet`) as the image input for all generations, not the moody portraits. The marks-detail sheet is for close verification.
+
 ## Coloring
 
 Grey tabby stripes over a pale cream underbelly. White socks on the front paws only. Pink nose with one grey spot on the left edge.
