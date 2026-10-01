@@ -1,0 +1,32 @@
+# beats.yaml — the single source of truth for an episode's narration beats.
+#
+# The pipeline derives from this file:
+#   1. voiceover.txt  = beats joined (TTS input)
+#   2. captions.srt   = each beat aligned to the voiceover audio (word-accurate)
+#   3. rough-cut trims = each clip trimmed to its caption's time range
+#
+# Rules:
+# - The HOOK is always beat 1 and always gets its own visual (shot "00").
+# - List only captioned beats. The silent end-card shot (crank button) needs
+#   no entry — the assembler holds it for TAIL_DUR seconds.
+# - Caption line breaks control the on-screen two-line layout. Keep each beat
+#   to 2 lines, ~40 chars per line.
+# - Write numbers and times in spoken form ("forty-seven", not "47").
+
+voice: avocado_v2:Lily   # locked Pepper voice; change only if Zohn picks a new one
+
+beats:
+  - shot: "00"
+    caption: |
+      HOOK LINE ONE HERE.
+      Hook line two here.
+
+  - shot: "01"
+    caption: |
+      Beat two line one.
+      Beat two line two.
+
+  - shot: "02"
+    caption: |
+      Beat three line one.
+      Beat three line two.
