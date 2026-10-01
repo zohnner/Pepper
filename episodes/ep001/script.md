@@ -2,8 +2,12 @@
 
 **Continuity:** follows ep000 (arrival). Pepper's debt: 47 cranks. Lift cranks earned: 0.
 
-### Hook
+### Hook (first line, 0-3s)
 "Marlow says I owe him forty-seven cranks. I counted the lift chains myself. There are only twelve."
+
+**Shot 0 — the hook visual:** extreme close-up of the massive lift chains, crank handle,
+Marlow's paw gripping it, lantern light raking wet metal. The hook is ALWAYS its own shot —
+it never plays over shot 1, or every narration line lands one clip late.
 
 ### Scenes
 
