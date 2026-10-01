@@ -5,8 +5,9 @@ Every episode moves left to right. Nothing posts until every box is checked.
 | ep | Script | Stills | Clips | Voice | Edit | Scheduled | Posted AM | Posted PM | Notes |
 |----|--------|--------|-------|-------|------|-----------|-----------|-----------|-------|
 | 001 | ✅ | 🔄 | 🔄 | 🔄 | ⬜ | ⬜ | ⬜ | ⬜ | The Debt — asset pack in production |
-| 002 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | |
-| 003 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | |
+| 002 | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | The Envelope — debt 47→46, first crank earned |
+| 003 | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | Old Moss — girl flash #1 (audio), debt unchanged |
+| 004 | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | The Mayor's Math — debt 46→47 (net +1) |
 
 Legend: ⬜ not started · 🔄 in progress · ✅ done · 🔴 blocked
 
