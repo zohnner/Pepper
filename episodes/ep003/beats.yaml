@@ -1,0 +1,33 @@
+# beats.yaml — ep003 "Old Moss"
+# Single source of truth: voiceover.txt, captions.srt, and rough-cut trims
+# all derive from this file. Hook is beat 1 (shot "00"). The silent lift
+# end-card (shot "05") needs no entry — the assembler holds it at the tail.
+
+voice: avocado_v2:Lily
+
+beats:
+  - shot: "00"
+    caption: |
+      There's a turtle under the Mile
+      who remembers when the tunnels were rivers.
+
+  - shot: "01"
+    caption: |
+      Nib says Old Moss remembers everything.
+      Even the way up.
+
+  - shot: "02"
+    caption: |
+      I asked him how to get home faster.
+      He laughed for a full minute.
+
+  - shot: "03"
+    caption: |
+      Then he said: the lift goes up, little stray. But debts
+      only fall if you stop counting his way. Count what HE
+      counts, not what you see.
+
+  - shot: "04"
+    caption: |
+      On the way back, I heard her. Just once.
+      My name, from above.
