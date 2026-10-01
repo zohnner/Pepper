@@ -6,6 +6,8 @@
 
 ### Hook (first line, 0-3s)
 One flat, intriguing sentence. No setup, no greeting.
+The hook gets its OWN visual (shot 0) — never let hook audio play over shot 1, or the whole
+episode's narration lands one clip late (learned on ep001, 2026-10-01).
 
 ### Scenes
 
