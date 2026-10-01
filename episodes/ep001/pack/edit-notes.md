@@ -1,8 +1,19 @@
 # ep001 — Edit Notes (for CapCut)
 
 ## Structure
-- 5 clips, ~10s each, hard cuts between them. Total ~50s.
-- Voiceover runs 00:00–00:27, then silence under the lift shot (05.mp4).
+- 6 clips, ~10s each, hard cuts between them. Total ~60s.
+- Voiceover runs 00:00–00:27, then silence under the lift shaft tail and the crank shot (05.mp4).
+
+## Audio/visual alignment (fixed 2026-10-01)
+The hook is its own visual beat (00.mp4). Every narration line now lands on its matching shot:
+| Time | Audio | Visual |
+|---|---|---|
+| 00:00–06 | "Marlow says I owe him forty-seven cranks…" | 00.mp4 chains + crank + paw |
+| 00:06–11 | "I woke up underground…" | 01.mp4 puddle / Nib |
+| 00:11–17 | "The kid's name is Nib…" | 02.mp4 market |
+| 00:17–22 | "Then the possum showed me the lift…" | 03.mp4 Marlow / key |
+| 00:22–26.5 | "Twelve chains. I counted…" | 04.mp4 lift shaft |
+| 00:26.5–end | silence | 05.mp4 paw on crank (the button) |
 
 ## In CapCut
 1. Import 01–05.mp4 in order + voiceover.mp3 on A1.
