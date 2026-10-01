@@ -1,0 +1,16 @@
+# ep001 — Edit Notes (for CapCut)
+
+## Structure
+- 5 clips, ~10s each, hard cuts between them. Total ~50s.
+- Voiceover runs 00:00–00:27, then silence under the lift shot (05.mp4).
+
+## In CapCut
+1. Import 01–05.mp4 in order + voiceover.mp3 on A1.
+2. Captions: import captions.srt, or re-time with auto-captions and paste the text. Keep captions in the lower third, clear of platform UI (leave ~250px bottom margin) and Pepper's face.
+3. Music bed: pick a trending dark-ambient sound, drop to ~−20dB under the voiceover. Silence it completely under 05.mp4 (the lift).
+4. Cover frame: use the cover text below, burned in or as a text layer: "47 CRANKS. 12 CHAINS."
+5. Export: 1080×1920, 30fps, high bitrate. No watermarks.
+
+## Notes
+- Shot 4's still was center-cropped from a square render (generator refused a fresh vertical). Eyeball it in the timeline — if the composition feels tight, flag for regeneration.
+- The hook lands in the first 3 seconds: keep shot 1's opening frame punchy, no fade-in.
