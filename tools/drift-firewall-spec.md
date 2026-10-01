@@ -16,6 +16,7 @@ Against `bible/reference/media-generation-pepper-model-sheet-0-*.webp` (the chai
 | Crooked white nose stripe veering left | stripe present, veers left, in any front/three-quarter face shot |
 | Oversized green eyes | green, oversized relative to head, in any face shot |
 | White socks, front paws only | white on front paws, grey on rear, in any full-body shot |
+| Style match | fur rendering, palette (lantern amber vs blue-green shadow), lighting and mood match `bible/style-lock.md` authority — not photorealistic, not Pixar-cartoon |
 
 **Wide shots** (Pepper small in frame): marks not individually verifiable — pass with note `wide-shot`.
 **Pepper absent** (e.g. Marlow-only, lift-only): pass with note `no-pepper`.
