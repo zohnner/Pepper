@@ -1,0 +1,35 @@
+# beats.yaml — ep002 "The Envelope"
+# Single source of truth: voiceover.txt, captions.srt, and rough-cut trims
+# all derive from this file. Hook is beat 1 (shot "00"). The silent lift
+# end-card (shot "05") needs no entry — the assembler holds it at the tail.
+
+voice: avocado_v2:Lily
+
+beats:
+  - shot: "00"
+    caption: |
+      The envelope was sealed.
+      I told myself that meant it wasn't my business.
+
+  - shot: "01"
+    caption: |
+      Marlow's first job: carry it through the flood tunnels.
+      One crank. Simple.
+
+  - shot: "02"
+    caption: |
+      Nib came anyway. Said the tunnels take a toll.
+      I told him I don't pay tolls.
+
+  - shot: "03"
+    caption: |
+      The envelope was an eviction notice. For a family of mice.
+      I was the bad guy's courier.
+
+  - shot: "04"
+    # VISUAL: reuses the shot-03 door visual (pack/04.mp4 is a copy of 03.mp4).
+    # The planned guilt close-up was blocked at image generation (2026-10-01);
+    # the door + mouse silhouettes carry the beat's emotion instead.
+    caption: |
+      The mother thanked me. Said at least the mayor sent someone kind.
+      I earned my first crank tonight. It felt like stealing.
